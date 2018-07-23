@@ -4,7 +4,7 @@ MAINTAINER Yufei Ren <renyufei@gmail.com>
 User root
 RUN set -x \
   && apt-get update -y \
-  && apt-get install \
+  && apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -14,5 +14,5 @@ RUN set -x \
   && add-apt-repository \
     "deb [arch=amd64] https://download.docker.com/linux/debian \
     $(lsb_release -cs) \
-    stable" \
+    stable" 
   && apt-get install -y docker-ce
