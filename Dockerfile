@@ -30,6 +30,6 @@ User jenkins
 COPY data/plugins.txt /usr/share/jenkins/ref/plugins.txt
 
 RUN set -x; \
-  /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt
+  /usr/local/bin/install-plugins.sh /usr/share/jenkins/ref/plugins.txt
   
 ENTRYPOINT ["/bin/tini", "--", "/usr/local/bin/jenkins.sh"]
