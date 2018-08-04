@@ -5,7 +5,12 @@
 
 ## manual build image
 ```
-docker build -f ./Dockerfile --rm -t yren/kiwi-jenkins:2.60.3 .
+docker build -f ./Dockerfile --rm -t yren/kiwi-jenkins:2.121.2 .
+```
+## push to docker hub
+```
+docker login
+docker push yren/kiwi-jenkins:2.121.2
 ```
 
 ## manual run
@@ -20,11 +25,5 @@ docker run -d --name="jenkins" \
 -v $HOST_J_HOME:/var/jenkins_home/ \
 -v /var/run/docker.sock:/var/run/docker.sock \
 -e "HOST_J_HOME=${HOST_J_HOME}" \
-yren/kiwi-jenkins:2.60.3
-```
-
-## push to docker hub
-```
-docker login
-docker push yren/kiwi-jenkins:2.60.3
+yren/kiwi-jenkins:2.121.2
 ```
