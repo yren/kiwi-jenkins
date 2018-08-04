@@ -1,4 +1,5 @@
-FROM jenkins:2.60.3
+## base recent jenkins lts version
+FROM jenkins:2.121.2
 MAINTAINER Yufei Ren <renyufei@gmail.com>
 
 User root
