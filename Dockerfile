@@ -1,5 +1,5 @@
 ## base recent jenkins lts version
-FROM jenkins:lts
+FROM jenkins/jenkins:2.141
 MAINTAINER Yufei Ren <renyufei@gmail.com>
 
 User root
@@ -25,7 +25,10 @@ RUN usermod -a -G docker jenkins \
 
 User jenkins
 
-# Install plugins
+# change default executors
+COPY executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
+
+# install plugins
 COPY data/plugins.txt /usr/share/jenkins/ref/plugins.txt
 
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/plugins.txt

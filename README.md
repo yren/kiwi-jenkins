@@ -1,7 +1,8 @@
 # kiwi jenkins
 
 ## docs
-* https://hub.docker.com/_/jenkins/
+* https://hub.docker.com/r/jenkins/jenkins/
+* https://github.com/jenkinsci/docker/blob/master/README.md
 
 ## manual build image
 ```
